@@ -3,11 +3,13 @@ package main
 import (
 	"net/http"
 
+	"github.com/AntonioGuilhermeDev/go-rest-api/db"
 	"github.com/AntonioGuilhermeDev/go-rest-api/models"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	db.InitDB()
 	server := gin.Default()
 
 	server.GET("/events", getEvents)
@@ -17,7 +19,13 @@ func main() {
 }
 
 func getEvents(ctx *gin.Context) {
-	events := models.GetAllEvents()
+	events, err := models.GetAllEvents()
+
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch events. Try again later."})
+		return
+	}
+
 	ctx.JSON(http.StatusOK, events)
 }
 
@@ -30,8 +38,12 @@ func createEvent(ctx *gin.Context) {
 		return
 	}
 
-	event.ID = 1
-	event.UserId = 1
-	event.Save()
+	err = event.Save()
+
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"message": "Could not create events. Try again later."})
+		return
+	}
+
 	ctx.JSON(http.StatusCreated, gin.H{"message": "Event created!", "event": event})
 }
