@@ -1,0 +1,9 @@
+PUT http://localhost:8080/events/20
+Content-Type: application/json
+
+{
+    "name": "Editing Test",
+    "description": "testing the new PUT updateEvent route",
+    "location": "Earth, Milky Way",
+    "datetime": "2025-05-21T118:42:00Z"
+}
