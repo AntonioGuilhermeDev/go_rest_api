@@ -1,0 +1,9 @@
+POST localhost:8080/events
+content-type: application/json
+
+{
+  "Name": "Workshop de Go",
+  "Description": "Evento para aprender os fundamentos de Go.",
+  "Location": "Auditório Central",
+  "DateTime": "2025-06-10T14:00:00Z"
+}

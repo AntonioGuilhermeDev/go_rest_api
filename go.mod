@@ -1,4 +1,4 @@
-module github.com/AntonioGuilhermeDev/go_rest_api
+module github.com/AntonioGuilhermeDev/go-rest-api
 
 go 1.23.3
 
