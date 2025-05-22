@@ -55,7 +55,7 @@ func createTables() {
 	}
 
 	createRegistrationsTable := `
-	CREATE TABLE IF NOT EXISTS registration (
+	CREATE TABLE IF NOT EXISTS registrations (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	event_id INTEGER,
 	user_id INTEGER, 

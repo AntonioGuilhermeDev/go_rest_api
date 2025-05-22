@@ -1,9 +1,9 @@
 POST http://localhost:8080/events
 content-type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3NDc5MjA3MDIsInVzZXJJZCI6MX0.B5y02FVSqIOKJjdCoR10dFuji3gWhy7r-RbriTZW_zU
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3NDc5MjI1OTYsInVzZXJJZCI6MX0.4ddSANsrz_lr5oMvEejXaACpUS9pBDYfgjCKRumPNqQ
 
 {
-  "Name": "Workshop de Go 2",
+  "Name": "Workshop de Go 3",
   "Description": "Evento para aprender os fundamentos de Go.",
   "Location": "Auditório Central",
   "DateTime": "2025-06-10T14:00:00Z"
