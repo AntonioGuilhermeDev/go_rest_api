@@ -1,5 +1,6 @@
 POST http://localhost:8080/events
 content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3NDc5MTk3ODIsInVzZXJJZCI6MH0.rCJw1UZiUIsvoTnFOh6dgwszslDxoOVHKaiRRhDsUts
 
 {
   "Name": "Workshop de Go 2",
